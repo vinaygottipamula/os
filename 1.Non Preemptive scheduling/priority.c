@@ -2,7 +2,6 @@
 // 7 2 0 3 6 2 5 3 1 4 5 4 2 7 6 9 4 5 4 10 7 10
 // 5 0 7 2 1 4 3 3 7 5 2 5 1 4 6 9
 // 5 1 2 2 1 3 1 0 1 4 2 0 5 3 4 2
-// this code can't handle idle time cases
 #include <stdio.h>
 #include <string.h>
 int at[100], bt[100], ct[100], tat[100], wt[100], gc[100], process[100], v[100], priority[100];

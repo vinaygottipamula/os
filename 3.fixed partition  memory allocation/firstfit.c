@@ -1,6 +1,6 @@
 // 3 300 25 70 3 150 300 35
-//4 300 25 125 50 2 150 350
-//4 357 210 468 491 6 200 400 600 500 300 250
+// 4 300 25 125 50 2 150 350
+// 4 357 210 468 491 6 200 400 600 500 300 250
 #include <stdio.h>
 int n, m;
 int main()
@@ -10,7 +10,7 @@ int main()
 
     int process_memory[n];
     int process[n];
-    
+
     for (int i = 0; i < n; i++)
     {
         printf("memory requirementof process-%d : ", i);
@@ -64,9 +64,9 @@ int main()
             printf("process %d is unallocated\n", i + 1);
             if (empty_blocks_memory >= process_memory[i])
             {
-                out_frag += process_memory[i];
+                if (out_frag < process_memory[i])
+                    out_frag = process_memory[i];
             }
-            
         }
         else
         {

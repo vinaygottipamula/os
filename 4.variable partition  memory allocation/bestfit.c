@@ -1,6 +1,6 @@
 // 3 300 25 70 3 150 300 35
 // 4 300 25 125 50 2 150 350
-//4 357 210 468 491 6 200 400 600 500 300 250
+// 4 357 210 468 491 6 200 400 600 500 300 250
 #include <stdio.h>
 int n, m, i, j;
 int main()
@@ -65,18 +65,18 @@ int main()
 	{
 		if (process[i] != -1)
 		{
-			printf("process-%d is allocated to block-%d\n", i,process[i]);
+			printf("process-%d is allocated to block-%d\n", i, process[i]);
 		}
 		else
-        {
-            printf("process %d is unallocated \n", i);
+		{
+			printf("process %d is unallocated \n", i);
 			if (empty_blocks_memory >= process_memory[i])
 			{
-				out_frag += process_memory[i];
+				if (out_frag < process_memory[i])
+					out_frag = process_memory[i];
 			}
-        }
+		}
 	}
-
 
 	printf("\n\n\nexternal fragment of memory:%d\n ", out_frag);
 	printf("\nTotal memory of empty unallocated blocks = %d\n", empty_blocks_memory);
